@@ -1,0 +1,31 @@
+name: CI
+
+# controls when the action will run. Triggers the workflow on push, but only on main branch.
+on: 
+  push:
+    branches: [main]
+    
+# A workflow run is made up of one or more jobs that can run in parallel or sequentially.
+jobs:
+  # this workflow contains one job calles test
+  test:
+    # the type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    # steps represents a sequence of tasks taht will be executed as part of the job
+    steps:
+    # checks out the repository where the yml is in (v3 is the version of the checkout feature)
+    # it is also possible to checkout other repos: https://github.com/marketplace/actions/checkout?version=v3.3.0
+    - uses: actions/checkout@v3
+    
+    # Runs a single command using the runners shell
+    - name: Run a one-line script
+      run: echo Hello World!
+      
+    # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: |
+          echo line one
+          echo line two
+    
+    
