@@ -12,7 +12,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to github actions test!
         </h1>
 
         <CytoscapeComponent 
@@ -21,6 +21,7 @@ export default function Home() {
               { data: { id: 'two', label: 'Node 2' }, position: { x: 100, y: 100 } },
               { data: { source: 'one', target: 'two', label: 'Edge from Node1 to Node2' } }]}                
             style={{ width: '600px', height: '600px' }}/>
+
       </main>
 
       <footer>
